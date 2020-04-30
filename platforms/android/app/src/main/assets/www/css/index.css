@@ -33,7 +33,7 @@ header {
   top: 1px;
   left: 0;
   z-index: 6;
-  background: #e85656;
+  background: #191970;
   box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -83,7 +83,7 @@ header button {
   z-index:2;
 
   border-radius: 25px;
-  background: #fff;
+  background: rgb(244, 244, 247);
   border: 0px;
   box-shadow: none;
   outline: none;
@@ -232,7 +232,7 @@ ul.todo li .buttons button.remove svg .fill {
 }
 
 ul.todo li .buttons button.remove:hover svg .fill {
-  fill: hsl(0, 77%, 47%);
+  fill: #7b81dd;
 }
 
 ul.todo li .buttons button.complete svg .fill {
@@ -258,12 +258,12 @@ ul.todo#completed:before {
 }
 
 ul.todo#todo:empty:after {
-  content: 'You have nothing to-do!';
+  content: 'Yay!, You have nothing to-do!';
   margin: 15px 0 0 0;
 }
 
 ul.todo#completed:empty:after {
-  content: 'You have yet to complete any tasks.';
+  content: 'You have pending tasks.';
 }
 
 ul.todo#todo:after,
