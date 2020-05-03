@@ -25,11 +25,11 @@
     <body>
         <div data-role="page" id="page">
             <header id="details">
-                    <div class="current-date"></div>
+                    <div class="currentDate"></div>
                    
             </header>
             <header>
-                    <input type="text" placeholder="Enter a Task.." id="inputTaskName">
+                    <input type="text" placeholder="Enter a Task.." id="inputData">
                     <button id="addButton">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 						x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;"
@@ -45,10 +45,13 @@
             <div data-role="content" class="container">
                 
 
-                <ul class="todo" id="todo"></ul>
+                <ul class="taskList" id="todo"></ul>
     
-                 
-                <!-- <ul class="todo" id="completed"></ul> -->
+                 <!-- tasks to do -->
+               
+               
+            <ul class="taskList" id="completed"></ul>
+                <!-- tasks completed -->
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>

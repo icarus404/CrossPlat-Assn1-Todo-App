@@ -34,7 +34,7 @@ header {
   left: 0;
   z-index: 6;
   background: #191970;
-  box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+  box-shadow: 0px 2px 4px rgba(79, 101, 124, 0.15);
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
@@ -47,7 +47,7 @@ header input {
   font-weight: 400;
   text-indent: 18px;
   padding: 0 60px 0 0;
-  background: rgba(178, 173, 241, 0.2);
+  background: rgba(177, 173, 228, 0.2);
   border-radius: 5px 25px 25px 5px;
   border: 0px;
   box-shadow: none;
@@ -58,19 +58,19 @@ header input {
 }
 
 header input::-webkit-input-placeholder {
-  color: rgba(175, 148, 148, 0.75);
+  color: rgba(217, 216, 240, 0.2);
 }
 
 header input:-moz-input-placeholder {
-  color: rgba(175, 148, 148, 0.75);
+  color: rgba(217, 216, 240, 0.2);
 }
 
 header input::-moz-input-placeholder {
-  color: rgba(175, 148, 148, 0.75);
+  color: rgba(217, 216, 240, 0.2);
 }
 
 header input:-ms-input-placeholder {
-  color: rgba(175, 148, 148, 0.75);
+  color: rgba(217, 216, 240, 0.2);
 }
 
 header button {
@@ -107,17 +107,11 @@ header button svg {
 header button svg .fill {
   fill: #0d9678;
 }
-.current-date {
+.currentDate {
     margin-top: 1.5em;
     letter-spacing: 0.5px;
     margin-left: 1.5em;
-}
-.geolocation {
-  margin-top: 1.5em;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  margin-left: auto;
-  margin-right: 1.5em;
+    color: rgb(250, 250, 250);
 }
 
 .container {
@@ -126,12 +120,12 @@ header button svg .fill {
   padding: 15px;
 }
 
-ul.todo {
+ul.taskList {
   width: 100%;
   float: left;
 }
 
-ul.todo li {
+ul.taskList li {
   width: 100%;
   min-height: 50px;
   float: left;
@@ -149,11 +143,11 @@ ul.todo li {
   word-break: break-word;
 }
 
-ul.todo li:last-of-type {
+ul.taskList li:last-of-type {
   margin: 0;
 }
 
-ul.todo li .buttons {
+ul.taskList li .buttons {
   width: 100px;
   height: 50px;
 
@@ -162,7 +156,7 @@ ul.todo li .buttons {
   right: 0;
 }
 
-ul.todo li .buttons button {
+ul.taskList li .buttons button {
   width: 50px;
   height: 50px;
   float: left;
@@ -177,7 +171,7 @@ ul.todo li .buttons button {
   -moz-appearance: none;
 }
 
-ul.todo li .buttons button:last-of-type:before {
+ul.taskList li .buttons button:last-of-type:before {
   content: ' ';
   width: 1px;
   height: 30px;
@@ -188,7 +182,7 @@ ul.todo li .buttons button:last-of-type:before {
   left: 0;
 }
 
-ul.todo li .buttons button svg {
+ul.taskList li .buttons button svg {
   width: 22px;
   height: 22px;
 
@@ -199,75 +193,71 @@ ul.todo li .buttons button svg {
   margin: -11px 0 0 -11px;
 }
 
-ul.todo li .buttons button.complete svg {
+ul.taskList li .buttons button.complete svg {
   border-radius: 11px;
   border: 1.5px solid #25b99a;
 
   transition: background 0.2s ease;
 }
 
-ul.todo#completed li .buttons button.complete svg {
+ul.taskList#completed li .buttons button.complete svg {
   background: #25b99a;
   border: 0px;
 }
 
-ul.todo:not(#completed) li .buttons button.complete:hover svg {
+ul.taskList:not(#completed) li .buttons button.complete:hover svg {
   background: rgba(37, 185, 154, 0.75);
 }
 
-ul.todo:not(#completed) li .buttons button.complete:hover svg .fill {
+ul.taskList:not(#completed) li .buttons button.complete:hover svg .fill {
   fill: #fff;
 }
 
-ul.todo#completed li .buttons button.complete svg .fill {
+ul.taskList#completed li .buttons button.complete svg .fill {
   fill: #fff;
 }
 
-ul.todo li .buttons button svg .fill {
+ul.taskList li .buttons button svg .fill {
   transition: fill 0.2s ease;
 }
 
-ul.todo li .buttons button.remove svg .fill {
+ul.taskList li .buttons button.remove svg .fill {
   fill: #c0cecb;
 }
 
-ul.todo li .buttons button.remove:hover svg .fill {
+ul.taskList li .buttons button.remove:hover svg .fill {
   fill: #7b81dd;
 }
 
-ul.todo li .buttons button.complete svg .fill {
+ul.taskList li .buttons button.complete svg .fill {
   fill: #25b99a;
 }
 
-ul.todo#completed {
+ul.taskList#completed {
   position: relative;
   padding: 60px 0 0 0;
 }
 
-ul.todo#completed:before {
-  content: ' --Completed Tasks--';
+ul.taskList#completed:before {
+  content: 'Tasks Completed';
+  color: rgb(57, 128, 57);
   width: 150px;
   height: 2px;
   background: #d8e5e0;
-
+  text-align: center;
   position: absolute;
-  top: 30px;
+  top: 35px;
   left: 50%;
 
   margin: 0 0 0 -75px;
 }
 
-ul.todo#todo:empty:after {
-  content: 'Yay!, You have nothing to-do!';
+ul.taskList#todo:empty:after {
+  content: 'You don`t have any task!';
   margin: 15px 0 0 0;
 }
 
-ul.todo#completed:empty:after {
-  content: 'You have pending tasks.';
-}
-
-ul.todo#todo:after,
-ul.todo#completed:after {
+ul.taskList#todo:after {
   width: 100%;
   display: block;
   text-align: center;

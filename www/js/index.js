@@ -58,6 +58,14 @@ document.getElementById('addButton').addEventListener('click', function () {
   }
 });
 
+//keyboard enter event
+document.getElementById('inputData').addEventListener("keyup",function (event) {
+  var value = this.value;
+  if ((event.keyCode === 13)&& value) {
+    addTask(value);
+  }
+});
+
 //function to add data ,callingfunction to add data to list and updating storage
 function addTask(value) {
   addTaskToList(value);
